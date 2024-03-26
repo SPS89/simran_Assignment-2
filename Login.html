@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Login Page</title>
+        <style>
+        /* Add your CSS styles here */
+        body {
+            background-image: url('Hospital.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 500px;
+            margin: 15px auto;
+            padding: 15px;
+            align-content: position;
+              background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 3px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Add more CSS styles as needed */
+    </style>
+    <script>
+        function closeWindow(){
+        window.close();
+        }
+   </script>
+</head>
+<body> 
+    <div class="container">
+
+    <h2>Login</h2>
+   <form method="post" action="login.jsp">
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email" required><br>
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required><br><br>
+        
+        <input type="submit" value="Login"><br><br>
+   </form>
+    <p><a href="#" onclick="closeWindow();">Exit</a></p><br>
+      
+    </div>
+</body>
+</html>

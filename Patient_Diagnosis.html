@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Diagnosis</title>
+    <style>
+        /* Set the background image */
+        body {
+            background-image: url('di.jpg'); /* Replace 'background.jpg' with your image file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        /* Style the form container */
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+               h2 {
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+     
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Diagnosis</h2>
+        <form action="patient_diagnosis.jsp" method="post">
+            
+            <label for="PID">PID:</label>
+            <input type="text" id="PID" name="PID" required>
+              <label for="Symptoms">Symptoms:</label>
+            <input type="text" id="Symptoms" name="Symptoms" required>  
+            <label for="Medicines">Medicines:</label>
+            <input type="text"id="Medicines" name="Medicines" required>          
+            <label for="Diagnosis">Diagnosis:</label>
+            <input type="text" id="Diagnosis" name="Diagnosis" required>         
+            <label for="WardReq">Ward Required:</label>
+            <input type="text" id="WardReq" name="WardReq" required>      
+           <label for="TypeWard">Type of Ward:</label>
+              <select id="TypeWard" name="TypeWard" required>
+                <option value="icu">icu</option>
+                <option value="general">general</option>
+                <option value="emergency">emergency</option>
+            </select>
+          
+            <input type="submit" value="Add Diagnosis"><br>
+        </form><br>
+        <button id="closeButton">Close</button><br>
+      <script>
+       document.getElementById('closeButton').addEventListener('click',function(){
+           window.location.href='home.html';
+       });
+        
+   </script>
+       
+    </div>
+    
+</body>
+</html>
