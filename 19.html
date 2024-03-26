@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2D Square Layout</title>
+</head>
+<body>
+<script>
+function createSquareLayout(rows, columns) {
+    const table = document.createElement('table');
+
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement('tr');
+        for (let j = 0; j < columns; j++) {
+            const cell = document.createElement('td');
+            cell.style.width = '50px'; 
+            cell.style.height = '50px'; 
+            cell.style.backgroundColor = (i + j) % 2 === 0 ? 'black' : 'red';
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+
+    document.body.appendChild(table);
+}
+
+const numRows = parseInt(prompt("Enter the number of rows:"));
+const numColumns = parseInt(prompt("Enter the number of columns:"));
+
+createSquareLayout(numRows, numColumns);
+</script>
+</body>
+</html>

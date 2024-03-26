@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+    </head>
+    <body>
+        <script>
+            name=prompt("enter your name");
+            dt=new Date();
+            hh=dt.getHours();
+            function digiClock(){
+                hh=dt.getHours();
+            }
+            if(hh<12)
+            {
+                greeting="Good Morning";
+            }
+            else if(hh=12)
+            {
+                greeting="Good Afternoon";
+            }
+            else if(hh>=12 && hh<16)
+            {
+                greeting="Good afternoon";
+            }
+            else if(hh>=16 && hh<19)
+            {
+                greeting="Good evening";
+            }
+            else
+            {
+                greeting="Goood Night";
+            }  
+            message=greeting+" "+name;  
+            msg=document.write(message);
+            msg.innerHTML.message;
+        </script>
+    </body>
+</html>

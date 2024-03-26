@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>temp</title>
+    </head>
+    <body>
+        <form>
+            <input type="number" name="inputV" onchange="TempConv()"/> 
+            <select name="inputOp" onchange="TempConv()">
+                <option value="c">celcius</option>
+                <option value="k">kelvin</option>
+                <option value="f">frenheit</option>
+            </select><br>
+            <input type="number" name="outputV" onchange="TempConv()"/>
+            <select name="outputOp" onchange="TempConv()">
+                <option value="c">celcius</option>
+                <option value="k">kelvin</option>
+                <option value="f">frenheit</option>
+            </select>
+        </form>
+        <script>
+            function TempConv(){
+            inputV =document.forms[0].elements['inputV'].value
+
+            inputOp=document.forms[0].elements['inputOp'].value
+            outputOp=document.forms[0].elements['outputOp'].value
+            if (inputOp=='c'&&outputOp=='f')
+            {
+                result=(inputV*9/5)+32;
+            }
+            else if(inputOp=='f'&&outputOp=='c')
+            {
+                result=(inputV*5/9)-32;
+            }
+            else if(inputOp=='c'&&outputOp=='k')
+            {
+                result=inputV+273.15;
+            }
+            else if(inputOp=='k'&&outputOp=='c')
+            {
+                result=inputV-273.15;
+            }
+            else if(inputOp=='k'&&outputOp=='f')
+            {
+                result=(inputV*9/5)-459.67;
+            }
+            else if(inputOp=='f'&&outputOp=='k')
+            {
+                result=(inputV-459.67)*5/9;
+            }
+
+            else{
+                result=inputV
+            }
+            document.forms[0].elements['outputV'].value=result
+            }
+        </script>
+    </body>
+</html>

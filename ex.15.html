@@ -1,0 +1,61 @@
+/*Make a layout template that contains a header and two paragraphs.
+ Use float to line up the two paragraphs as columns side by side. 
+ Give the header and two paragraphs a border and/or a background color so you can see where they are.*/
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <title>Layout Template</title>
+ <style>
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+   }
+ 
+   header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px 20px;
+     text-align: center;
+     border-bottom: 2px solid #666;
+   }
+   
+   .paragraphs-container {
+     overflow: hidden; 
+   }
+  
+   .paragraph {
+     width: 45%; 
+     float: left;
+     margin-right: 5%; 
+     padding: 20px;
+     border: 2px solid #666;
+     background-color: #f0f0f0;
+   }
+ 
+   .c::after {
+     content: "";
+     clear: both;
+     display: table;
+   }
+ </style>
+ </head>
+ <body>
+ 
+ <header>
+   <h1>Header</h1>
+ </header>
+ 
+ <div class="paragraphs-container c">
+   <div class="paragraph">
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget felis ullamcorper, consectetur erat ut, tempus ipsum. Integer nec turpis id lorem tempus volutpat. Nulla facilisi.</p>
+   </div>
+   <div class="paragraph">
+     <p>Quisque volutpat lectus ut leo aliquet, sit amet sodales turpis dictum. Vivamus accumsan nunc a mi maximus, eu accumsan leo volutpat. Fusce a ligula nec magna rutrum efficitur.</p>
+   </div>
+ </div>
+ 
+ </body>
+ </html>
+ 

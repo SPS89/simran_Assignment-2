@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js</title>
+        <style>
+            body{
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="clickChange()">click change background</button>
+        <div id="display"> 0 </div>
+        <script>
+            count=0;
+            bgs = [ '#123456',
+                    '#678910',
+                    '#abcd']
+            display = document.getElementById("display")
+            function clickChange()
+            {
+                
+                document.body.style.backgroundColor=bgs[count];
+                count=count+1;
+                if (count>=bgs.length)
+                {
+                    count=0;
+                }
+                
+                
+            }
+            setInterval=(clickChange,1000)
+        </script>
+        
+    </body>
+</html>

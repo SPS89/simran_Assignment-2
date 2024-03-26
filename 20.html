@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timer</title>
+</head>
+<body>
+
+<h1>Timer</h1>
+<p id="timer">0 seconds</p>
+<button id="startButton">Start</button>
+<button id="stopButton">Stop</button>
+
+<script>
+    var timerElement = document.getElementById("timer");
+    var startButton = document.getElementById("startButton");
+    var stopButton = document.getElementById("stopButton");
+    var timerInterval;
+    var seconds = 0;
+
+    function startTimer() {
+        timerInterval = setInterval(function() {
+            seconds++;
+            timerElement.textContent = seconds + " seconds";
+        }, 1000);
+        startButton.display = true;
+        stopButton.display = false;
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        startButton.display = false;
+        stopButton.display = true;
+    }
+
+    startButton.addEventListener("click", startTimer);
+    stopButton.addEventListener("click", stopTimer);
+</script>
+
+</body>
+</html>

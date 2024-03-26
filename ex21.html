@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <style>
+            #clock{
+                padding: 100px;
+                margin: 100px;
+                background-color: rgb(74, 74, 77);  
+            }
+        </style>
+    </head>
+    <body>
+        <div id="clock"></div>
+    <script>
+        clock=document.getElementById('clock');
+        
+        function digiClock(){
+            x='#1234'
+        var dt = new Date();
+        hh=dt.getHours();
+        mm=dt.getMinutes();
+        ss=dt.getSeconds();
+        time=hh+":"+mm+":"+ss;
+        clock.innerHTML =time;
+        clock.style.backgroundColor ='#'+ ss+ss+ss;
+        }
+
+
+        setInterval(digiClock,500);
+    </script>
+    </body>
+</html>

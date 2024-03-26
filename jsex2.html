@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js</title>
+    </head>
+    <body>
+        <button onclick="clickCount()">click it</button>
+        <div id="display"> 0 </div>
+        <script>
+            count =0;
+            display = document.getElementById("display")
+            function clickCount()
+            {
+                count=count+1;
+                display.innerHTML =count;
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Layout Template</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .container {
+        border: 2px solid #333;
+        margin: 20px;
+        overflow: hidden; /* Clear float */
+    }
+    .column {
+        float: left;
+        width: 50%; /* Two columns, each taking half of the container */
+        padding: 20px;
+        box-sizing: border-box; /* Include padding and border in element's total width */
+        border-right: 2px solid #333; /* Change the border color here */
+    }
+    /* Style only the last column to remove the right border */
+    
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Header</h1>
+</header>
+
+<div class="container">
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam risus ut orci tempus, eu vestibulum lectus malesuada. Integer laoreet eros quis felis ultricies varius.</p>
+    </div>
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam risus ut orci tempus, eu vestibulum lectus malesuada. Integer laoreet eros quis felis ultricies varius.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Cards</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .event-card {
+    width: calc(50% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .event-card .content {
+    padding: 20px;
+  }
+  .event-card .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .event-card .date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  .event-card .description {
+    font-size: 16px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<div class="container" id="event-container">
+</div>
+
+<script>
+  // Array of events
+  const events = [
+    {
+      title: "Event 1",
+      date: "March 15, 2024",
+      description: "meahndi"
+    },
+    {
+      title: "Event 2",
+      date: "April 10, 2024",
+      description: "sangit"
+    },
+    {
+      title: "Event 3",
+      date: "May 5, 2024",
+      description: "shadi"
+    },
+    // Add more events as needed
+  ];
+
+  // Function to generate event cards
+  function generateEventCards() {
+    const container = document.getElementById("event-container");
+
+    // Clear existing content
+    container.innerHTML = "";
+
+    // Loop through events and generate cards
+    events.forEach(event => {
+      const card = document.createElement("div");
+      card.classList.add("event-card");
+
+      const image = document.createElement("img");
+      image.src = "images/19.jpg";
+      image.src = "images/19.jpg";
+      image.src = "images/19.jpg"; // Add image source here
+      image.alt = event.title;
+
+      const content = document.createElement("div");
+      content.classList.add("content");
+
+      const title = document.createElement("div");
+      title.classList.add("title");
+      title.textContent = event.title;
+
+      const date = document.createElement("div");
+      date.classList.add("date");
+      date.textContent = event.date;
+
+      const description = document.createElement("div");
+      description.classList.add("description");
+      description.textContent = event.description;
+
+      content.appendChild(title);
+      content.appendChild(date);
+      content.appendChild(description);
+
+      card.appendChild(image);
+      card.appendChild(content);
+
+      container.appendChild(card);
+    });
+  }
+
+  // Call the function to generate event cards
+  generateEventCards();
+</script>
+</body>
+</html>

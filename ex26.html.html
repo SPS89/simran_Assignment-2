@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>fv</title>
+    </head>
+    <body>
+        <form action=" " method="get"  onsubmit="return validate()">
+            <input type="text" placeholder="Enter email" name="uname" pattern="[a-zA-Z]{5}[0-9]{5}" title="@banasthali.in"required/>
+            <input type="password" placeholder="Enter password" name="pass" />
+            <input type="submit" value="login"  required/>
+        </form>
+        <script>
+            function validate(){
+                uname=document.forms[0].elements['uname'].value;
+                unameRE =/^[a-zA-Z]{5}21[0-9]{3}$/
+                unameStatus =unameRE.test(uname)
+                if(unameStatus==false)
+                {
+                    alert("please enter smartcard id");
+                    return false;
+                }
+                pass=document.forms[0].elements['pass'].style.backgroundColor=pink;
+                if(pass!="")
+                return true;
+            }
+        </script>
+    </body>
+</html>

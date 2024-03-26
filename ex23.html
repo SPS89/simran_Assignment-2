@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex23</title>
+        <style>
+            #textdisplay{
+                color: red;
+                font-size: 20pt;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="textdisplay">TEXT-GROWING</div>
+    <script>
+         let fontSize=20;
+         let growing = true;
+            textdisplay=document.getElementById("textdisplay")
+            function change(){
+                if(growing){
+                    fontSize+=5;
+                    textdisplay.style.fontSize = fontSize + "pt"
+                    if(fontSize>=50) {
+                        growing = false
+                        textdisplay.style.color = "blue"
+                        textdisplay.textContent = "TEXT-SHRINKING"
+                    } 
+                } else { 
+                    fontSize-=5
+                    textdisplay.style.fontSize = fontSize + "pt"
+                    if(fontSize<=5) {
+                    growing = true
+                    textdisplay.style.color = 'red'
+                    textdisplay.textContent = "TEXT-GROWING"
+                    }
+                }
+            }   
+            setInterval(change, 100)
+    </script>
+    </body>
+</html>
