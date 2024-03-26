@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/o8.jpg');
+    background-size: cover;
+   
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;;
+}
+
+
+#hero {
+    background-image: url('images/bw1.jpg');
+    background-size: cover;
+    padding: 15rem;
+    color:rgb(250, 241, 83);
+    text-align: center;
+}
+
+#movies {
+    padding: 1rem;
+}
+
+.genre {
+    margin-bottom: 3rem;
+}
+
+.genre h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.movie-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie {
+    flex: 0 0 calc(20.333% - 1rem); 
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden; 
+    
+}
+.movie:hover  {
+    transform: translateY(-5px);
+    font-size: 50px;
+}
+.movie:hover p{
+    font-size: 20px;
+}
+
+
+.movie img {
+    width: 100%; 
+    height: auto; 
+}
+
+.movie p {
+    padding: 1rem;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
+#contact{
+    background-image: url('images/bw3.jpg');
+    background-size: cover;
+    padding: 15rem;
+    
+}
+#services{
+    background-image: url('images/bw3.jpg');
+    background-size: cover;
+    padding: 2rem;
+}
+#about{
+    background-image: url('images/bw3.jpg');
+    background-size: cover;
+    padding: 2rem;
+}
+#movies{
+    background-image: url('images/o.jpeg');
+    background-size: cover;
+    padding: 2rem;
+}
